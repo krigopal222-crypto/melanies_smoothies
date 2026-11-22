@@ -27,8 +27,8 @@ selected_ingredients = st.multiselect(
     "Choose up to 5 ingredients:",
     ingredients_list,
     max_selections=5,
-    st.subheader(fruit_df + 'Nutrition Information')
-    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
+    st.subheader(fruit_df + 'Nutrition Information'),
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  ,
     sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 )
 
