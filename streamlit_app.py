@@ -2,6 +2,7 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
 
+
 # Connect to Snowflake using Streamlit secrets
 cnx = st.connection("snowflake")
 session = cnx.session()
@@ -52,3 +53,9 @@ if st.button("Submit Order"):
         st.success(
             f"Hello {name_on_order}! Your smoothie is ordered! 🥤"
         )
+
+
+
+import requests  
+smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+st.text(smoothiefroot_response)
